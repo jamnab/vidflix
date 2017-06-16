@@ -1,0 +1,11 @@
+{
+  "name": "vidflix",
+  "version": "0.1.0",
+  "description": "Netflix like video player",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "James McNab",
+  "license": "ISC"
+}
