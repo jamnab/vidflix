@@ -1,27 +1,26 @@
 /* global React ReactDOM */
 
-var MyTitle = () => {
+var ce = React.createElement
+
+var MyTitle = (props) => {
   return (
-    React.createElement('div', null,
-    React.createElement('h1', null, 'Check out this component!')
+    ce('div', null,
+    ce('h1', {style: {color: props.color}}, props.title)
     )
   )
 }
 
-// replace MyFirstComponent
-var ce = React.createElement
-
 var MyFirstComponent = () => {
   return (
     ce('div', null,
-      ce(MyTitle, null),
-      ce(MyTitle, null),
-      ce(MyTitle, null)
+      ce(MyTitle, {color: 'rebeccapurple', title: 'House of Cards'}),
+      ce(MyTitle, {color: 'peru', title: 'Orange is the New Black'}),
+      ce(MyTitle, {color: 'burlywood', title: 'Stranger Things'})
     )
   )
 }
 
 ReactDOM.render(
-  React.createElement(MyFirstComponent),
+  ce(MyFirstComponent),
   document.getElementById("app")
 )
