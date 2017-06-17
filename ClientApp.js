@@ -8,12 +8,15 @@ var MyTitle = () => {
   )
 }
 
+// replace MyFirstComponent
+var ce = React.createElement
+
 var MyFirstComponent = () => {
   return (
-    React.createElement('div', null,
-      React.createElement(MyTitle, null),
-      React.createElement(MyTitle, null),
-      React.createElement(MyTitle, null)
+    ce('div', null,
+      ce(MyTitle, null),
+      ce(MyTitle, null),
+      ce(MyTitle, null)
     )
   )
 }
