@@ -4,8 +4,13 @@
   "description": "Netflix like video player",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "format": "prettier --list-different --single-quote --print-width=120 \"js/**/*.{js,jsx}\"",
+    "lint": "eslint **/*.{js,jsx} --quiet"
   },
   "author": "James McNab",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^1.4.4"
+  }
 }
