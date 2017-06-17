@@ -6,11 +6,16 @@
   "scripts": {
     "test": "test",
     "format": "prettier --list-different --single-quote --print-width=120 \"js/**/*.{js,jsx}\"",
-    "lint": "eslint **/*.{js,jsx} --quiet"
+    "lint": "eslint **/*.{js,jsx} --quiet",
+    "build": "Webpack js/ClientApp.js js/bundle.js"
   },
   "author": "James McNab",
   "license": "ISC",
   "devDependencies": {
     "prettier": "^1.4.4"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }
