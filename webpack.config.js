@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   context: __dirname,
@@ -16,11 +17,16 @@ module.exports = {
     reasons: true,
     chunks: false
   },
+  devServer: {
+    publicPath: '/public/'
+  },
   module: {
-    rules: [
+    loaders: [
       {
-        test: '/\.jsx?$/',
-        loader: 'babel-loader'
+        enforce: "pre",
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loaders: ["babel-loader"]
       }
     ]
   }
