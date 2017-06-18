@@ -18,7 +18,8 @@ module.exports = {
     chunks: false
   },
   devServer: {
-    publicPath: '/public/'
+    publicPath: '/public/',
+    historyApiFallback: true
   },
   module: {
     loaders: [

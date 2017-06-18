@@ -1,16 +1,21 @@
+/** General Imports **/
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+/** Component Imports **/
+import Landing from './Landing';
+import Search from './Search';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="landing">
-          <h1>Vidflix</h1>
-          <input type="text" placeholder="search"/>
-          <a href="" className="browse">or Browse All</a>
+      <BrowserRouter>
+        <div className="App">
+          <Route exact path="/" component={Landing}></Route>
+          <Route path="search" component={Search}></Route>
         </div>
-      </div>
+      </BrowserRouter>
     )
   }
 }
