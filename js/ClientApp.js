@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 
 import MyTitle from './MyTitle';
 
-var ce = React.createElement
+var ce = React.createElement;
 
 var MyFirstComponent = () => {
   return (
@@ -15,7 +15,6 @@ var MyFirstComponent = () => {
   )
 }
 
-ReactDOM.render(
-  ce(MyFirstComponent),
-  document.getElementById("app")
-)
+render(
+  React.createElement(MyFirstComponent), document.getElementById('app')
+);

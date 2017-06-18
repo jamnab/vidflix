@@ -4,7 +4,10 @@ node_modules
 
 # silly repo lockfiles are for apps
 
+public/bundle.js
 yarn.lock
 package-lock.json
 
 *.log
+
+.DS_Store
