@@ -1,9 +1,7 @@
-/** General Imports **/
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-/** Component Imports **/
 import Landing from './Landing';
 import Search from './Search';
 
